@@ -28,3 +28,38 @@ app.get('/getData', (req, res) => {
 app.listen(3000, () => {
     console.log('App is Running...')
 })
+
+
+let sum = a => b => b ? sum(a + b) : a;
+
+console.log(sum(1)(2)(3)(4)(5)())
+reverseString = str => str.split('').reverse().join('')
+
+console.log(reverseString('dad'));
+
+const obj = {
+    a: 1,
+    b: 2,
+    getA() {
+        console.log(this.a)
+        return this;
+    },
+    getB() {
+        console.log(this.b)
+        return this;
+    }
+}
+
+obj.getA().getB()
+
+let arry = [1, 2, 3, 4, 5];
+
+console.log(arry.reduce((acc, item) => acc + item))
+
+   
+function isPolindrome(str){
+    str = str.replace(/\W/g,'').toLowerCase();
+    return (str == str.split('').reverse().join(''));
+}
+
+console.log(isPolindrome('nan'))
